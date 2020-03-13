@@ -39,7 +39,9 @@ gem 'devise'
 gem 'materialize-sass', '~> 0.99.0'
 gem 'material_icons'
 gem 'redis'
-gem 'sidekiq'
+gem 'sidekiq', '~> 4.0'
+gem 'inky-rb', require: 'inky'
+gem 'premailer-rails'
 
 group :test do
   gem "factory_bot_rails"
