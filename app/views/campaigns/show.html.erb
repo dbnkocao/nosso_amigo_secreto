@@ -3,6 +3,8 @@
     <p class="title">Informações</p>
   </div>
 
+  <%= render 'delete_confirm' %>
+
   <div class="campaign">
     <div class="row cards">
       <div class="col s8 offset-s2">
@@ -99,7 +101,7 @@
     <div class="col s12 center">
       <div class="col s6 m3 offset-m3 l2 offset-l4">
         <%= form_for @campaign, method: 'delete', html: {class: 'remove_campaign'} do |f| %>
-          <button type='submit' class="waves-effect waves-light btn grey">Remover</button>
+          <a class="waves-effect waves-light btn grey modal-trigger" href="#modal1">Remover</a>
         <% end %>
       </div>
       <div class="col s6 m3 l3">
