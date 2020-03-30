@@ -35,7 +35,35 @@ RSpec.describe MembersController, type: :controller do
   end
 
   describe "PUT #update" do
-    pending
+    before(:each) do
+      @campaign = create(:campaign, user: @current_user)
+      @new_member_attributes = attributes_for(:member)
+      request.env["HTTP_ACCEPT"] = 'application/json'
+    end
+
+    context "User is the Campaign Owner" do
+      before(:each) do
+        member = create(:member, campaign: @campaign)
+        put :update, params: {id: member.id, member: @new_member_attributes}
+      end
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "Campaign have the new attributes" do
+        expect(Member.last.name).to eq(@new_member_attributes[:name])
+        expect(Member.last.email).to eq(@new_member_attributes[:email])
+      end
+    end
+
+    context "User isn't the Campaign Owner" do
+      it "returns http forbidden" do
+        member = create(:member)
+        put :update, params: {id: member.id, campaign: @new_campaign_attributes}
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
   end
 
   describe "DELETE #destroy" do

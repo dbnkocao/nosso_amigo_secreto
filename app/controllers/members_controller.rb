@@ -27,7 +27,7 @@ class MembersController < ApplicationController
 
   def update
     respond_to do |format|
-      if @member.update(member_params)
+      if @member.update(member_params_update)
         format.json { render json: true }
       else
         format.json { render json: @member.errors, status: :unprocessable_entity }
@@ -53,6 +53,10 @@ class MembersController < ApplicationController
 
   def member_params
     params.require(:member).permit(:name, :email, :campaign_id)
+  end
+
+  def member_params_update
+    params.require(:member).permit(:name, :email)
   end
 
   def is_owner?

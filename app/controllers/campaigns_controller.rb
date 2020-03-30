@@ -54,6 +54,13 @@ class CampaignsController < ApplicationController
     end
   end
 
+  def member
+    member = Member.find(params[:id])
+    render partial: 'member', locals: { m: member }
+  end
+
+
+
   private
 
   def set_campaign

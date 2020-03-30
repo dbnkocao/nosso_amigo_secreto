@@ -1,0 +1,22 @@
+<div class="member" id="member_<%= m.id %>">
+  <%= form_for(m, html: {id: "form_#{m.id}", class: 'update_member'}) do |f| %>
+    <div class="row">
+      <div class="col s12 m5 input-field">
+        <%= f.text_field :name, class: "validate member_update" %>
+        <label for="name" class="active">Nome</label>
+      </div>
+      <div class="col s12 m5 input-field">
+        <%= f.email_field :email, class: "validate member_update" %>
+        <label for="email" class="active" data-error="Formato incorreto">Email</label>
+      </div>
+      <div class="col s3 offset-s3 m1 input-field">
+        <i class="material-icons icon <%= (m.open)? 'opened' : '' %>">visibility</i>
+      </div>
+      <div class="col s3 m1 input-field">
+        <a href="#" class="remove_member" id="<%= m.id %>">
+          <i class="material-icons icon">delete</i>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>
