@@ -21,3 +21,4 @@
 /config/secrets.yml
 .env-prod
 /public/assets
+/node_modules
