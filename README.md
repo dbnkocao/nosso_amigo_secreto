@@ -58,7 +58,7 @@ Tecnologias usadas nesse projeto.
 ![list campaigns](https://github.com/dbnkocao/nosso_amigo_secreto/blob/master/public/readme_images/campaign_list.png)
 
 ### 6. Email enviado para o participante
-![email user](https://github.com/dbnkocao/nosso_amigo_secreto/blob/master/public/readme_images/add_user.png)
+![email user](https://github.com/dbnkocao/nosso_amigo_secreto/blob/master/public/readme_images/email_user.png)
 
 ## Funcionalidades
 * Criação de inúmeras campanhas
