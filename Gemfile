@@ -39,7 +39,7 @@ gem 'devise'
 gem 'materialize-sass', '~> 0.99.0'
 gem 'material_icons'
 gem 'redis'
-gem 'sidekiq', '~> 4.0'
+gem 'sidekiq', '~> 5.2'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
 
