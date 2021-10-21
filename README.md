@@ -1,5 +1,5 @@
 ![Logo of the project](https://github.com/dbnkocao/nosso_amigo_secreto/blob/master/public/readme_images/logo.png)
-## Nosso Amigo Secretao
+## Nosso Amigo Secreto
 
 Esse projeto foi produzido durante o bootcamp do [onebitcode](https://onebitcode.com/), é uma ferramento para gerenciamento da famosa brincadeira de final de ano Amigo Secreto. Faz o sorteio de amigos garantindo que nenhum participante tire ele mesmo como amigo e envia email para os participantes avisando quem é o seu amigo secreto.
 
